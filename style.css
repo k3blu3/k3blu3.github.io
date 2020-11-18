@@ -38,6 +38,16 @@ h3 {
 	font-size: 18px;
 }
 
+a {
+	font-family: 'Raleway', sans-serif;
+	color: #58a398;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 
 
 

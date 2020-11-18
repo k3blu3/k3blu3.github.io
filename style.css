@@ -1,0 +1,41 @@
+body {
+	margin: 0;
+	padding: 50;
+	text-align: left;
+	width: 60%;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 20px;
+	color: #404040;
+	background-color: #fbf9f9;
+	margin: 0;
+	line-height: 1.5em;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+	font-family: Tahoma, Geneva, sans-serif;
+	line-height: 1.3;
+	font-weight: normal
+}
+
+h1, h2, h3 {
+	display: block;
+	border-bottom: 1px solid #ccc;
+	padding-button: 5px;
+}
+
+h1 {
+	font-size: 34px;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+
+
+

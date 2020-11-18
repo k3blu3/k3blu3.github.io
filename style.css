@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@700&display=swap');
+
 body {
 	margin: 0;
 	padding: 50;
 	text-align: left;
 	width: 40%;
-	font-family: Tahoma, Geneva, sans-serif;
+	font-family: 'Overpass', sans-serif;
 	font-size: 20px;
 	color: #404040;
 	background-color: #fbf9f9;
@@ -13,7 +15,7 @@ body {
 }
 
 h1, h2, h3 {
-	font-family: Tahoma, Geneva, sans-serif;
+	font-family: 'Overpass', sans-serif;
 	line-height: 2.0;
 	font-weight: normal
 }

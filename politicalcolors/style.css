@@ -20,7 +20,13 @@ h1, h2, h3 {
 	line-height: 2.0;
 }
 
-h1, h2, h3 {
+
+h1 {
+	display: block;
+	padding-button: 5px;
+}
+
+h2, h3 {
 	display: block;
 	border-bottom: 1px solid #ccc;
 	padding-button: 5px;

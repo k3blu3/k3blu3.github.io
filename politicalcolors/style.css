@@ -23,6 +23,7 @@ h1, h2, h3 {
 
 h1 {
 	display: block;
+	border-bottom: 1px none;
 	padding-button: 5px;
 }
 

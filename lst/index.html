@@ -1,0 +1,38 @@
+<style type="text/css">
+	@import url("style.css")
+</style>
+
+<body>
+	<img src="images/lst_modis.jpeg"  alt="">
+	<h1>
+		Record-breaking Temperatures in 2019
+	</h1>
+
+	<h3>
+		<a href="https://www.washingtonpost.com/weather/2020/01/29/newly-released-satellite-data-reveals-patterns-record-warmth-2019/?arc404=true"  target="_blank">Newly released satellite data reveals the patterns of record warmth in 2019</a><br />
+		January 2020<br /><br />
+		With <a href="https://timwallace.net/" target="_blank">Tim Wallace</a><br /><br />
+	</h3>
+
+	<p>
+	When 2020 rolled around, there was a flurry of media activity discussing how 2019 was one of the hottest years on record around the world. We noticed that many of these articles used data from <a href="http://berkeleyearth.org/" target="_blank">Berkeley Earth</a>, a fantastic organization that publishes climate data that incorporates <a href="http://berkeleyearth.org/data-new/" target="_blank">multiple models and sensor measurements</a> and averages them together. 
+	</p>
+
+	<p>
+	We wanted to see if we could see some of these same trends from land surface temperature derived from <a href="https://modis.gsfc.nasa.gov/about/" target="_blank">MODIS</a> onboard the Aqua and Terra satellites. While the temporal stack only goes back to the early 2000s (compared to the 1950s from Berkeley Earth and other climate models), the spatial resolution is significantly higher (1 km pixels as opposed to ~30 km). 
+	</p>
+
+	<p>
+	We took land surface temperature <a href="https://modis.gsfc.nasa.gov/data/dataprod/mod11.php" target="_blank">data</a> and created yearly composites (min, max, mean, median). From these yearly composites, we were able to create pixel-wise rank statistics. These revealed patterns such as:
+	</p>
+
+	<ol>
+		<li>Which areas were the hottest (coldest) in 2019?</li>
+		<li>Which areas were the hottest (coldest) in the past five years?</li>
+		<li>Which areas are on average getting warmer?</li>
+	</ol>
+
+	<p>
+	Some of this analysis made it into the article linked above. As a final step, we compared our MODIS analysis with climate models from Berkeley Earth, which showed good agreement between the two.
+	</p>
+</body>

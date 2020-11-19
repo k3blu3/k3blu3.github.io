@@ -25,6 +25,14 @@
 	</h3>
 
 	<p>
-	COVID NO2....
+	When lockdowns were first announced in China in the beginning of 2020, we wondered whether the subsequent lack of activity was measurable from space. Specifically, we started poking around nitogen dioxide emissions data from the TROPOMI sensor onboard <a href="https://www.google.com/search?q=sentinel+5p&oq=sentinel+5p&aqs=chrome..69i57j35i39j0l6.1913j0j7&sourceid=chrome&ie=UTF-8" target="_blank">Sentinel-5P</a> satellite.
+	</p>
+
+	<p>
+	While Sentinel-5P has daily coverage, using the instantaneous data by itself is problematic due to weather effects, clouds and data quality issues. We experimented with various ways to composite the data, and settled on an <a href="https://en.wikipedia.org/wiki/Inverse-variance_weighting" target="_blank">inverse variance weighted</a> composite. This composite utilized the nitrogen dioxide concentration values, the associated standard error, data quality flags and the cloud mask.
+	</p>
+
+	<p>
+	We scaled out this analysis, and created global rolling composites comparing 2019 to 2020. Our work was featured in multiple media outlets during the first wave of the pandemic.
 	</p>
 </body>

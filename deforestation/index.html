@@ -1,0 +1,34 @@
+<style type="text/css">
+	@import url("style.css")
+</style>
+
+<body>
+	<video controls autoplay loop>
+		<source src="images/mangrove_deforestation.mp4" type="video/mp4"/>
+	</video>
+
+	<h1>
+		Mangrove Deforestation in Mexico
+	</h1>
+
+	<h3>
+		<a href="https://qz.com/1807407/mexico-is-illegally-destroying-mangroves-to-build-lopez-obradors-oil-refinery/" target="_blank">Mexico is illegally destroying protected mangrove trees to build an $8 billion oil refinery</a><br />
+		March 2020<br /><br />
+	</h3>
+
+	<p>
+	We received an inbound from the nice folks at Quartz to see if we could use satellite imagery to analyze and quantify the deforestation of <a href="https://en.wikipedia.org/wiki/Mangrove" target="_blank">mangrove trees</a> in Puerto Dos Bocas, Mexico. Through their reporting, Quartz discovered that a region was being illegally deforested in order to build an oil refinery, with the government turning a blind eye.
+	</p>
+
+	<p>
+	I took a look with the <a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-1" target="_blank">Sentinel-1</a> satellite, an active <a href="https://en.wikipedia.org/wiki/Synthetic-aperture_radar" target="_blank">synthetic aperture radar (SAR)</a> imager. SAR data, unobstructed by clouds, is a powerful tool for measuring certain types of changes, including vegetation. Deforestation can be thought of as a change detection problem from vegetation to bare earth.
+	</p>
+
+	<p>
+	Using a scene before deforestation began as a baseline, I computed the log ratio of every subsequent scene using the VH polzarization band. The animation above reveals the pattern of deforestation over time. Since this deforestation occured over multiple years, we see not only the change from vegetation to bare earth but also subsequent new growth in the deforested areas.
+	</p>
+
+	<p>
+	Check out the article for more details. Using the deforested regions from Sentinel-1, I computed the amount of deforested land over time in this region. Quartz was able to corroborate these changes with known events such as fines and permits being issued.
+	</p>
+</body>

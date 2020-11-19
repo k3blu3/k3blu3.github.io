@@ -1,0 +1,40 @@
+<style type="text/css">
+	@import url("style.css")
+</style>
+
+<body>
+	<img src="images/urban_change.jpeg"  alt="">
+	<h1>
+		Urban Expansion
+	</h1>
+
+	<h3>
+		<a href="https://www.nytimes.com/interactive/2019/12/27/upshot/america-from-above.html" target="_blank">A Decade of Urban Transformation, Seen From Above</a><br />
+		December 2019<br /><br />
+		With <a href="https://timwallace.net/" target="_blank">Tim Wallace</a><br /><br />
+	</h3>
+
+	<p>
+	The nice folks at the New York Times approached us with an intriguing question: could we use satellite imagery to map how the United States has changed over the past decade?
+	</p>
+
+	<p>
+	We focused our efforts on one aspect of this broad question: could we find new construction? From a remote sensing standpoint, construction can be thought of as a pixel that contains an <a href="https://en.wikipedia.org/wiki/Impervious_surface#:~:text=Impervious%20surfaces%20are%20mainly%20artificial,resistant%20materials%20such%20as%20asphalt%2C" target="_blank">impervious surface</a>.
+	</p>
+
+	<p>
+	To detect impervious surfaces, we trained a <a href="https://arxiv.org/abs/1505.04597" target="_blank">UNet</a> segmentation model on Landsat imagery. For training data, we used the <a href="https://www.mrlc.gov/data/type/urban-imperviousness" target="_blank">urban imperviousness</a> dataset from 2016 from the National Land Cover Database (NLCD). 
+	</p>
+
+	<p>
+	To train the model, we generated image/target pairs for segmentation. The imagery was constructed from a cloud-free median composite of Landsat 8 imagery over the continental United States. The corresopnding targets for each image were constructed from the NLCD impervious surface dataset, converted to a binary image. We utilized six bands (red, green, blue, nir, swir1, swir2) from Landsat imagery. Once trained, the model given an input image generates a probability map of every pixel belonging to an impervious surface class at 30 meter resolution.
+	</p>
+
+	<p>
+	The model was deployed over two composites: a cloud-free median Landsat 5 composite from 2008/2009, and a cloud-free median composite Landsat 8 composite from 2018/2019. The outputs from both composites were then differenced to ultimately produce the map above: a map of all newly constructed surfaces in the United States over the past decade.
+	</p>
+
+	<p>
+	Check out the article for more details and fun anecdotes that we found along the way. 
+	</p>
+</body>

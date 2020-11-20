@@ -1,0 +1,37 @@
+<style type="text/css">
+	@import url("style.css")
+</style>
+
+<body>
+	<img src="images/bogs_MA.jpeg"  alt="">
+	<h1>
+		Cranberry Bogs and Synthetic Aperture Radar
+	</h1>
+
+	<h3>
+		<a href="https://www.nationalgeographic.com/history/2019/11/united-states-cranberry-harvest-explained-charts/"  target="_blank">The U.S. cranberry harvest explained in four charts</a><br />
+		November 2019<br />
+		<a href="https://medium.com/descarteslabs-team/how-we-built-a-machine-learning-model-to-locate-and-map-cranberry-bogs-for-national-geographic-4a85686c456b" target="_blank">Technical details blog post</a><br /><br />
+		With <a href="https://timwallace.net/" target="_blank">Tim Wallace</a><br /><br />
+	</h3>
+
+	<p>
+	For a fun thanksgiving piece, National Geographic asked us if we could map cranberry bogs across the United States from satellite imagery. Intrigued, we took a closer look at a bunch of different sources. It turns out that synthetic aperture radar (SAR) imagery from <a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-1" target="_blank">Sentinel-1</a> was the exact dataset that we were looking for.
+	</p>
+
+	<p>
+	The interesting thing about cranberry bogs is that they're periodically flooded throughout the year. We can exploit this fact by computing pixel-wise statistics (mean, min, max, std) across a year's worth of SAR imagery. Since a bog is periodically flooded, the minimum across a year should be quite low, corresponding with high water content. However, during other parts of the year, the backscatter should be higher.
+	</p>
+
+	<p>
+	We trained a <a href="https://en.wikipedia.org/wiki/Random_forest#:~:text=Random%20forests%20or%20random%20decision,average%20prediction%20(regression)%20of%20the" target="_blank">random forest</a> classifier on SAR statistics to identify cranberry bogs. For training data, we were able to get our hands on some data from state GIS sites, notably Massachusetts and Wisconsin, which lead the United States in cranberry production.
+	</p>
+
+	<p>
+	This ended up being a somewhat frivolous but extremely fun project. We were surprised at how well the detector ended up working. Notably we did find false alarms particularly in coastal wetland areas that looked a lot like cranberry bogs. We even found some natural wild cranberry bogs in Maine!
+	</p>
+
+	<p>
+	Check out the article for some fun visuals, and the Medium post for a technical deep-dive and model details.
+	</p>
+</body>

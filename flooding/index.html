@@ -1,0 +1,27 @@
+<style type="text/css">
+	@import url("style.css")
+</style>
+
+<body>
+	<img src="images/dorian_flooding.jpeg"  alt="">
+	<h1>
+		Mapping Flooding during Hurricane Dorian
+	</h1>
+
+	<h3>
+		<a href="https://www.nytimes.com/interactive/2019/09/04/world/americas/bahamas-damage-hurricane-dorian.html"  target="_blank">The Bahamas, Before and After Hurricane Dorian</a><br />
+		September 2019<br /><br />
+	</h3>
+
+	<p>
+	Hurricane Dorian was a devastating Category 5 hurricane that hit the Bahamas exceptionally hard. In preparation, the European Space Agency directed both Sentinel-1 satellites, A and B, to focus their collection over the Bahamas. That was pretty incredible to see in and of itself!
+	</p>
+
+	<p>
+	As soon as every Sentinel-1 scene was available during and after the hurricane, I ran a simple thresholding and median filter algorithm on the VH band of the Sentinel-1 image. Given how pronounced the flooding was, this simple algorithm worked quite well in delineating regions within the Bahamas that had been flooded. The flood map shown above is the output of this simple algorithm over the Grand Bahama, specifically looking at Freeport, the main city on the island.
+	</p>
+
+	<p>
+	Once the results were delivered to the Times, I tried a more complex approach, by training a <a href="https://arxiv.org/abs/1505.04597" target="_blank">UNet</a> on the VV and VH bands, with training data collected from high resolution landcover data from coastal wetlands in the United States. Upon examination, the algorithm performed quite comparably to the simple algorithm in this case. My suspicion is that with fine tuning, it'd work better and require less fine tuning on a case-by-case basis.
+	</p>
+</body>

@@ -11,7 +11,6 @@
 	<h3>
 		<a href="https://igarss2021.com/view_paper.php?PaperNum=3500" target="_blank">Global land use / land cover with Sentinel 2 and deep learning</a><br />
 		<a href="https://livingatlas.arcgis.com/landcover" target="_blank">ESRI Land Cover</a><br />
-		<a href="https://www.arcgis.com/apps/instant/media/index.html?appid=fc92d38533d440078f17678ebc20e8e2" target="_blank">Download the data</a><br />
 		<a href="https://storymaps.arcgis.com/stories/486cd2ae2016454f951c97f802f125b3" target="_blank">A new land cover map of the world</a><br />
 		<a href="https://www.bbc.com/news/science-environment-57615408" target="_blank">'Eyes of a machine': How to classify Planet Earth</a><br />
 		June 2021<br /><br />
@@ -20,7 +19,11 @@
 	</h3>
 
 	<p>
-	Land cover maps are foundational geospatial data products for understanding the state of the environment and how it's changing. Typically, these maps (like <a href="https://www.mrlc.gov" target="_blank">NLCD</a> made by <a href="https://www.usgs.gov" target="_blank">USGS</a>) take years to create, require manual/expert tweaking, and are limited in geographic scope. At Impact Observatory, we set out to create a global 2020 land cover map, with 10 discrete classes, from Sentinel-2 imagery, at 10-meter resolution. The map was developed with <a href="https://livingatlas.arcgis.com/landcover" target="_blank">Esri</a> and in partnership with <a href="https://www.microsoft.com/en-us/ai/ai-for-earth" target="_blank"> Microsoft AI for Earth</a>. The map is an open dataset and freely available with a CC-by license, and you can download it <a href=https://www.arcgis.com/apps/instant/media/index.html?appid=fc92d38533d440078f17678ebc20e8e2" target="_blank">here</a>.
+	Land cover maps are foundational geospatial data products for understanding our environment and how it's evolving through time. Typically, these maps (like <a href="https://www.mrlc.gov" target="_blank">NLCD</a> made by <a href="https://www.usgs.gov" target="_blank">USGS</a>) take years to create, require manual/expert tweaking, and are limited in geographic scope. At Impact Observatory, we set out to create a global 2020 land cover map, with 10 discrete classes, from Sentinel-2 imagery, at 10-meter resolution. 
+	</p>
+	
+	<p>
+	The map was developed with <a href="https://livingatlas.arcgis.com/landcover" target="_blank">Esri</a> and in partnership with <a href="https://www.microsoft.com/en-us/ai/ai-for-earth" target="_blank"> Microsoft AI for Earth</a>. This is an open dataset and freely available with a CC-by license, and you can download it in GeoTIFF format <a href=https://www.arcgis.com/apps/instant/media/index.html?appid=fc92d38533d440078f17678ebc20e8e2" target="_blank">here</a>.
 	</p>
 
 	<p>
@@ -28,7 +31,11 @@
 	</p>
 
 	<p>
-	While instantaneous land cover classififications on single scenes can be useful for some applications, we chose to incorporate many scenes across 2020 to create a land cover map that is representative of the whole year. This approach minimizes issues that inevitably arise due to cloud cover variability and data coverage gaps. More scenes are used in very cloudy parts of the world compared to cloud-free areas. To take a stack of imagery over a region and convert it into a single map, the segmentation model is run over each scene in the stack. Then, a <a href="https://scikit-learn.org/stable/modules/generated/sklearn.utils.extmath.weighted_mode.html" target="_blank">weighted mode</a> is computed across the predictions, incorporating the probability of each classification along with a custom weight per class. The custom class weight can be thought of as a seasonal adjustment, which emphasizes ephemeral classes that may only occur a few times per year such as grass, and de-emphasizes classes that are transient such as snow/ice.
+	While instantaneous land cover classifications on single scenes can be useful for some applications, we chose to incorporate many scenes across 2020 to create a land cover map that is representative of the whole year. This approach minimizes issues that inevitably arise due to cloud cover variability and data coverage gaps. More scenes are used in very cloudy parts of the world compared to cloud-free areas. 
+	</p>
+
+	<p>
+	To take a stack of imagery over a region and convert it into a single map, the segmentation model is run over each scene in the stack. Then, a <a href="https://scikit-learn.org/stable/modules/generated/sklearn.utils.extmath.weighted_mode.html" target="_blank">weighted mode</a> is computed across the predictions, incorporating the probability of each classification along with a custom weight per class. The custom class weight can be thought of as a seasonal adjustment, which emphasizes ephemeral classes that may only occur a few times per year such as grass, and de-emphasizes classes that are transient such as snow/ice.
 	</p>
 
 	<p>

@@ -1,0 +1,27 @@
+<style type="text/css">
+	@import url("style.css")
+</style>
+
+<body>
+	<img src="images/ghcn_records.png"  alt="">
+	<h1>
+		Mapping extreme weather via the Global Historical Climatology Network
+	</h1>
+
+	<h3>
+		<a href="https://www.nytimes.com/interactive/2022/01/11/climate/record-temperatures-map-2021.html" target="_blank">A Vivid View of Extreme Weather: Temperature Records in the U.S. in 2021</a><br />
+		January 2022<br /><br />
+	</h3>
+
+	<p>
+	The <a href="https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily" target="_blank">Global Histogral Climatology Network</a> is an integrated database of daily climate summaries from land surface stations across the globe. Unsurprisingly, the United States has some of the most dense coverage. This massive vector dataset was a great choice for mapping both extreme heat and cold temperatures in 2021.
+	</p>
+	
+	<p>
+	This project was my first deep dive into BigQuery, and it was super fun to figure out how to write queries to wrangle all of this data. Apart from the temporal aggregation required to find daily minimum and maximum temperatures, we also spatially aggregated the data to <a href="https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts/GovtUnit/National/GDB/" target="_blank">incorporated places</a> as defined by the USGS. Within each area, data across stations is treated a a unified measurement for calculating historical records.
+	</p>
+
+	<p>
+	This project opened my eyes to the power of BigQuery, and I'm excited to use it for future projects. A newsroom could spin up a service that is able to produce these types of maps the day after the data is available in BigQuery, providing real-time updates and analysis to the audience. 
+	</p>
+</body>
